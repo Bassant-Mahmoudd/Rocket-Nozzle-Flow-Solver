@@ -28,4 +28,5 @@ $$T = T_c \left(1 + \frac{\gamma-1}{2}M^2\right)^{-1} \quad \text{and} \quad P =
 * `Nozzle_Flow_Solver.ipynb`: The main Jupyter Notebook containing the mathematical documentation, the Newton-Raphson solver, and the `matplotlib` visualization architecture.
 
 ## Flow Visualization Dashboard
+<img width="1536" height="754" alt="Figure_11" src="https://github.com/user-attachments/assets/50585b87-5431-40a9-a265-2b702836a318" />
 
