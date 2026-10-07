@@ -13,7 +13,10 @@ $$r(x) = 1 + 0.435\vert{}x\vert{} - 0.00365x^2 - 0.000659\vert{}x\vert{}^3$$
 
 ### 2. The Newton-Raphson Mach Solver
 For choked, isentropic flow, the local Mach number ($M$) is implicitly coupled to the geometric area ratio ($A/A^*$) via:
-$$\left(\frac{A}{A^*}\right)^2 = \frac{1}{M^2} \left[ \frac{2}{\gamma+1} \left( 1 + \frac{\gamma-1}{2} M^2 \right) \right]^{\frac{\gamma+1}{\gamma-1}}$$
+
+$$
+\left(\frac{A}{A^*}\right)^2 = \frac{1}{M^2} \left[ \frac{2}{\gamma+1} \left( 1 + \frac{\gamma-1}{2} M^2 \right) \right]^{\frac{\gamma+1}{\gamma-1}}
+$$
 
 Because this equation cannot be solved analytically for $M$, the script defines an objective function $F(M) - (A/A^*)^2 = 0$. A custom Newton-Raphson numerical loop iteratively updates the Mach guess using the analytical derivative $F'(M)$ until the convergence tolerance ($10^{-8}$) is met. The algorithm dynamically branches its initial guess depending on whether the flow is in the subsonic (convergent) or supersonic (divergent) regime.
 
